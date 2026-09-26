@@ -4,7 +4,7 @@
 Originality, reliability, readability, scalability, modularity.
 
 ## NAMING CONVENTIONS (CRITICAL)
-- ABSOLUTELY EVERYTHING (functions, views, CSS classes, IDs, variables) must follow camelCase (e.g., funcionPrimaria).
+- EVERYTHING must follow camelCase (e.g., primaryFunction).
 - Names MUST be descriptive of their exact purpose/context.
 - STRICTLY PROHIBITED: Generic names (hero, funcion1, test, temp, data).
 
@@ -14,7 +14,7 @@ Originality, reliability, readability, scalability, modularity.
 Use Bootstrap (CSS/JS) strictly for layout/grids. NO Bootstrap for graphic design/styling.
 
 ### Custom CSS
-Minimal classes. Prefer descendant selectors (e.g., `.class div h2`).
+Minimal classes. Prefer descendant selectors (e.g., `.class div h2`), don't use descendant selectors with classes (e.g., `.class div .class2`).
 Strict order: 1) Header, 2) General tags (section, h2), 3) Main/Aside (chronological), 4) Footer.
 
 ### Razor Views
@@ -46,9 +46,5 @@ All DB operations go in a single `BD.cs` class using Dapper. Alert user if Dappe
 CRITICAL: Always read the root `.sql` file to verify schema, tables, and existing Stored Procedures before writing queries.
 Syntax: `using (var c = new SqlConnection(connStr)) { return c.Execute("INSERT...", model); }`
 
-# MANDATORY INIT PROTOCOL
-STOP & ASK user to pick state:
-## Brand New.
-## Refactor/Redo (UI or Logic).
-## Add on Top (preserve existing style).
-Ask for colors, style, refs, folder structure.
+## MANDATORY INIT PROTOCOL
+Ask for colors, style, refs, folder structure, etc.
