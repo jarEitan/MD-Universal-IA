@@ -14,7 +14,7 @@ Originality, reliability, readability, scalability, modularity.
 Use Bootstrap (CSS/JS) strictly for layout/grids. NO Bootstrap for graphic design/styling.
 
 ### Custom CSS
-Minimal classes. Prefer descendant selectors (e.g., `.class div h2`), don't use descendant selectors with classes (e.g., `.class div .class2`).
+Minimal and re-usable classes. Use descendant selectors (e.g., `.class div h2`), don't use descendant selectors with classes (e.g., `.class div .class2`).
 Strict order: 1) Header, 2) General tags (section, h2), 3) Main/Aside (chronological), 4) Footer.
 
 ### Razor Views
